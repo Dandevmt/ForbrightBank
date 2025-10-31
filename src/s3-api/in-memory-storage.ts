@@ -4,7 +4,6 @@ const store: Customer[] = [];
 
 export class InMemoryStorage {
     async saveCustomer(customer: Customer): Promise<string> {
-        customer.Id = (store.length + 1).toString();
         store.push(customer);        
         return customer.Id;
     }
